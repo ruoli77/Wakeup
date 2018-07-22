@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>share</title>
+    <title>网页嵌入代码语法高亮</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/highlight/styles/darcula.css">
+    <script src="assets/highlight/highlight.pack.js"></script>
+    <script >hljs.initHighlightingOnLoad();</script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .main{
+
+            padding: 10px 20px;
+        }
+        .javascript,.html{
+            /*max-width: 600px;*/
+
+        }
+        h1{
+            width: 100%;
+            padding: 0 0 10px 0;
+            margin-bottom: 0;
+            border: none;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 30px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: #595959;
+            background-color: transparent;
+            outline: none;
+            border-radius: 0;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    </style>
 </head>
 <body>
-1111111sdfdf
-sdf
-</body>
-</html>
+<div class="main">
+    <h1>微信小程序开发</h1>
+    简易教程： <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html?t=201874">https://developers.weixin.qq.com/miniprogram/dev/index.html?t=201874</a>
+    <p>
+
+    </p>
+    <pre>
+    <code class="html">
+        <view class="confirm-btn" bindtap='goToIndex'>
+          <text >进入主页</text>
+        </view>
+        <text class="copyright">感谢 @qindiandadudu 贡献本页代码</text>
+    </code>
+</pre>
+    <h1>Highlight.js</h1>
+    <pre>
+    <code class="javascript">
+        了科技时代放声大哭
+        function selectionSort(arr){
+            var minIndex, temp, len = arr.length;
+            for(var i=0; i < len; i++){
+                minIndex = i;
+                for(var j=i+1; j < len; j++){
+                    if(arr[j] < arr[minIndex]){
+                        minIndex = j;
+                    }
+                }
+                temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+            }
+            return arr;
+        }
+        var num = new Array;
+        num = [1,5,2,8,4,9,3,0,4];
+        console.log(selectionSort(num));
+    </code>
+</pre>
+</div>
+
+
+<script>
+    //将HTML转为普通文本，
+    var $code = document.getElementsByClassName("html");
+    for (var i = 0; i < $code.length; i++) {
+        var element = $code[i];
+        element.innerText = element.innerHTML;
+    }
+</script>
