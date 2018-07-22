@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>网页嵌入代码语法高亮</title>
+    <title>share</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="assets/highlight/styles/darcula.css">
+    <!--<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">-->
+    <link rel="shortcut icon" href="assets/img/bitbug_favicon.ico" type="image/x-icon">
     <script src="assets/highlight/highlight.pack.js"></script>
     <script >hljs.initHighlightingOnLoad();</script>
     <style>
@@ -66,29 +68,42 @@
     }
     </code>
 </pre>
-    <h1>Highlight.js</h1>
-    <pre>
-    <code class="javascript">
-        function selectionSort(arr){
-            var minIndex, temp, len = arr.length;
-            for(var i=0; i < len; i++){
-                minIndex = i;
-                for(var j=i+1; j < len; j++){
-                    if(arr[j] < arr[minIndex]){
-                        minIndex = j;
-                    }
-                }
-                temp = arr[i];
-                arr[i] = arr[minIndex];
-                arr[minIndex] = temp;
-            }
-            return arr;
+<p>
+    2. 只能分享转发到朋友
+</p>
+<pre>
+    <code>
+   onShareAppMessage: function () {
+        return {
+            title: '这里是标题',
+            path: '/pages/index/index'
         }
-        var num = new Array;
-        num = [1,5,2,8,4,9,3,0,4];
-        console.log(selectionSort(num));
+    }
     </code>
 </pre>
+
+    <p>
+        3. 开发插件 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html">https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/development.html</a>
+    </p>
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;使用插件 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html">https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/using.html</a>
+    </p>
+
+    http://mpvue.com/
+    <p>mpvue: <a href="http://mpvue.com/">http://mpvue.com/</a></p>
+    <pre>
+    <code>
+   onShareAppMessage: function () {
+        return {
+            title: '这里是标题',
+            path: '/pages/index/index'
+        }
+    }
+    </code>
+    </pre>
+
+
+
 </div>
 
 
