@@ -39,6 +39,12 @@
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+        p{
+            font-size: 14px;
+            color: #5f6163;
+            line-height: 1.5;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -46,20 +52,23 @@
     <h1>微信小程序开发</h1>
     简易教程： <a href="https://developers.weixin.qq.com/miniprogram/dev/index.html?t=201874">https://developers.weixin.qq.com/miniprogram/dev/index.html?t=201874</a>
     <p>
-
+        1. 通过css加载背景图片只能加载线上图片
     </p>
     <pre>
-    <code class="html">
-        <view class="confirm-btn" bindtap='goToIndex'>
-          <text >进入主页</text>
-        </view>
-        <text class="copyright">感谢 @qindiandadudu 贡献本页代码</text>
+    <code class="css html">
+    <image class="wave" src="/images/more/wave.png" mode="aspectFill"></image>
+
+    .back-wrap{
+      height: 400rpx;
+      /* background: url('../../images/more/pic1.png');  */
+      background: url('https://ruoli77.github.io/Wakeup/assets/img/pic1.png');
+      background-size: cover;
+    }
     </code>
 </pre>
     <h1>Highlight.js</h1>
     <pre>
     <code class="javascript">
-        了科技时代放声大哭
         function selectionSort(arr){
             var minIndex, temp, len = arr.length;
             for(var i=0; i < len; i++){
